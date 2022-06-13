@@ -1,37 +1,42 @@
 {
-  "name": "back-end",
+  "name": "rayhan",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.*",
+    "yarn": "1.22.18"
+  },
   "scripts": {
     "start": "node -r dotenv/config bin/www",
+    "test": "jest",
+    "eslint": "eslint .",
+    "build": "npm run db:migrate && npm run test",
     "develop": "nodemon -r dotenv/config bin/www",
     "db:create": "sequelize db:create",
     "db:drop": "sequelize db:drop",
     "db:migrate": "sequelize db:migrate",
-    "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
-    "test": "jest",
-    "eslint": "eslint .",
-    "extends": "eslint:recommended"
+    "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
-    "eslint": "^8.17.0",
     "express": "^4.18.1",
-    "i": "^0.3.7",
-    "jest": "^28.1.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.7.3",
     "sequelize": "^6.20.1",
     "sequelize-cli": "^6.4.1",
-    "supertest": "^6.2.3",
     "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "eslint": "^8.16.0",
+    "eslint-config-next": "12.1.6",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
   }
 }

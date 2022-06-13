@@ -14,7 +14,7 @@ class AuthenticationController extends ApplicationController {
     accessControl = {
         PUBLIC: "PUBLIC",
         ADMIN: "ADMIN",
-        MEMBER: "MEMBER",
+        CUSTOMER: "CUSTOMER",
     };
 
     authorize = (rolename) => {
@@ -86,7 +86,7 @@ class AuthenticationController extends ApplicationController {
             }
 
             const role = await this.roleModel.findOne({
-                where: {name: this.accessControl.MEMBER},
+                where: {name: this.accessControl.CUSTOMER},
             });
 
             const user = await this.userModel.create({

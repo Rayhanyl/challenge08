@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /*
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
@@ -12,7 +11,7 @@ module.exports = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "C:\\Users\\rayha\\AppData\\Local\\Temp\\jest",
+  // cacheDirectory: "C:\\Users\\raffi\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,

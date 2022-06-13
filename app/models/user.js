@@ -15,6 +15,16 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
+    toJSON() {
+      return {
+        id: this.id,
+        name: this.name,
+        email: this.email,
+        image: this.image,
+        createdAt: this.createdAt,
+        updatedAt: this.updatedAt,
+      }
+    }
   }
   User.init({
     name: DataTypes.STRING,
