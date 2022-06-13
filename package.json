@@ -12,7 +12,7 @@
     "start": "node -r dotenv/config bin/www",
     "test": "jest",
     "eslint": "eslint .",
-    "build": "npx run db:rollback && npx run db:migrate && npx run db:seed",
+    "build": "npm run db:migrate && npm run db:seed",
     "develop": "nodemon -r dotenv/config bin/www",
     "db:create": "sequelize db:create",
     "db:drop": "sequelize db:drop",
